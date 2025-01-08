@@ -111,7 +111,6 @@ jobs:
       uses: ncipollo/release-action@main
       with:
         commit: ${{ github.sha }}
-        tag: ${{ env.Compilation_time }}
         artifacts: opt/firmwares/*.trx
         allowUpdates: true
         omitBodyDuringUpdate: true

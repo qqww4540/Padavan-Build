@@ -108,13 +108,13 @@ jobs:
         path: /opt/images
 
     - name : Upload to release
-      uses: ncipollo/release-action@main
+      uses: svenstaro/upload-release-action@master
       with:
-        commit: ${{ github.sha }}
-        artifacts: opt/firmwares/*.trx
-        tag: AutoBuild
-        allowUpdates: true
-        omitBodyDuringUpdate: true
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: /opt/images/*.trx
+        tag: AtuoBuild
+        overwrite: true
+        file_glob: true
 
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main

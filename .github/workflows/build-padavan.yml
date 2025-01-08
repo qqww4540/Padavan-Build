@@ -110,7 +110,7 @@ jobs:
     - uses: ncipollo/release-action@main
       with:
        tag: AutoBuild
-       artifacts: opt/firmwares/*.trx
+       artifacts: /opt/images/*.trx
        allowUpdates: true
        omitBodyDuringUpdate: true
        name: Padavan-firmware

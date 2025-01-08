@@ -112,6 +112,7 @@ jobs:
       with:
         commit: ${{ github.sha }}
         artifacts: opt/firmwares/*.trx
+        tag: AutoBuild
         allowUpdates: true
         omitBodyDuringUpdate: true
 

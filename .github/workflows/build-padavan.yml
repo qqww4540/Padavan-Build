@@ -107,7 +107,7 @@ jobs:
         name: Padavan-packages
         path: /opt/images
 
-    - uses: ncipollo/release-action@v1
+    - uses: ncipollo/release-action@main
       with:
        tag: AutoBuild
        artifacts: opt/firmwares/*.trx

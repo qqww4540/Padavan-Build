@@ -106,3 +106,12 @@ jobs:
       with:
         name: Padavan-packages
         path: /opt/images
+
+    - name : Upload to release
+      uses: ncipollo/release-action@main
+      with:
+        commit: ${{ github.sha }}
+        tag: ${{ env.Compilation_time }}
+        artifacts: opt/firmwares/*.trx
+        allowUpdates: true
+        omitBodyDuringUpdate: true

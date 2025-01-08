@@ -107,19 +107,12 @@ jobs:
         name: Padavan-packages
         path: /opt/images
 
-    - name : Upload to release
-      uses: svenstaro/upload-release-action@v1-release
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: /opt/images/*.trx
-        tag: AtuoBuild
-        overwrite: true
-        file_glob: true
     - uses: ncipollo/release-action@v1
       with:
-       bodyFile: "changelog.md"
-       tag: AtuoBuild
+       tag: AutoBuild
+       artifacts: opt/firmwares/*.trx
        allowUpdates: true
+       omitBodyDuringUpdate: true
        name: Padavan-firmware
        token: ${{ secrets.GITHUB_TOKEN }}
 

@@ -115,6 +115,13 @@ jobs:
         tag: AtuoBuild
         overwrite: true
         file_glob: true
+    - uses: ncipollo/release-action@main
+      with:
+       bodyFile: "changelog.md"
+       tag: AtuoBuild
+       allowUpdates: true
+       name: Padavan-firmware
+       token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main

@@ -108,7 +108,7 @@ jobs:
 #        name: Padavan-packages
 #        path: /opt/images
 
-    - name: Upload binaries to release
+    - name: Upload to release
       uses: ncipollo/release-action@main
       with:
         tag: AutoBuild
